@@ -6,6 +6,10 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
+}
+body{
+    overflow-x: hidden;
 }
 
 header {
@@ -161,9 +165,7 @@ section {
 @keyframes rotate-border {
     100% {
         transform: rotate(360deg);
-
     }
-
 }
 
 .home-img .img-box .img-item {
@@ -178,7 +180,6 @@ section {
     z-index: 1;
     overflow: hidden;
 }
-
 .home-img .img-box .img-item img {
     position: absolute;
     box-shadow: #fff;
@@ -213,12 +214,17 @@ section {
 }
 
 .social-icons a {
+    
     color: #fff;
     font-size: 1.7em;
     padding: 10px;
 
 }
+.social-iconsa{
+    color: #fff
+    ;
 
+}
 .a {
     display: flex;
     justify-content: space-evenly;
@@ -232,7 +238,6 @@ section {
     border-radius: 5px;
     transform: scale(1.1);
 }
-
 .title {
     display: flex;
     justify-content: center;
@@ -344,7 +349,7 @@ section {
 
 }
 
-/* لجعل الصورة والنص تحت بعض في الشاشات الصغيرة */
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -468,6 +473,53 @@ section {
     color: #9b9908;
 }
 
+.container12 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 200px;
+            flex-wrap: wrap;
+}
+
+        .home-info{
+            flex: 1;
+        }
+
+        .home-img{
+            flex: 1;
+        }
+
+        .home-img img {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .container12 {
+                flex-direction: column;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 0px ;
+            }
+            .home-img{
+                width: 80%;
+                margin: auto;
+            }
+
+        }
+        @media (max-width: 414px) {
+            .container12 {
+                flex-direction: column;
+                text-align: center;
+            }
+            .home-img .img-box::before, .home-img .img-box::after {
+                width: 10%;
+            }
+        }
+
 @media(max-widthe:1023px) {
     header {
         padding: 12px 20px;
@@ -585,6 +637,16 @@ section {
         width: 30%;
         max-width: 200px;
     }
+    .home-info{
+        text-align: left;
+    margin-left: 10px ;
+    padding-left: 10px ;
+    }
+    .home-img{
+        text-align: center;
+        max-width: 100px;
+        min-width: auto;
+    }
 
 }
 
@@ -592,4 +654,150 @@ section {
     body {
         font-size: 10px;
     }
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding: 10px 3%;
+    }
+    
+    section {
+        padding: 80px 3%;
+    }
+}
+
+@media (max-width: 992px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+    
+    .home-info {
+        margin-bottom: 50px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .img-box {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #f0f0f0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+    }
+    
+    .navigation.active {
+        left: 0;
+    }
+    
+    .navigation a {
+        margin: 15px 0;
+        font-size: 1.2em;
+    }
+    
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    
+    .Iama {
+        font-size: 1.3em;
+    }
+    
+    .home-info h3 {
+        font-size: 1.2em;
+    }
+    
+    .profile img {
+        width: 300px;
+        height: 400px;
+    }
+    
+    .about {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 1.2em;
+    }
+    
+    .home-info h2 {
+        font-size: 1.3em;
+    }
+    
+    .Iama {
+        font-size: 1.1em;
+    }
+    
+    .home-info h3 {
+        font-size: 1em;
+    }
+    
+    .main-btn {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+    
+    .img-box {
+        max-width: 250px;
+    }
+    
+    .profile img {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .project-card {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-info h2 {
+        font-size: 1.1em;
+    }
+    
+    .Iama {
+        font-size: 1em;
+    }
+    
+    .social-icons a {
+        font-size: 1.5em;
+    }
+    
+    .img-box {
+        max-width:150px;
+        max-height:150px;
+        min-height:150px ;
+        margin-top:200px ;
+}
+.home-info h3{
+    color:#000000;
+}
 }
